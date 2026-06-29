@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 17:53 UTC",
-  "total_commits": 42,
-  "total_lines": 5820,
+  "generated_at": "2026-06-29 18:01 UTC",
+  "total_commits": 43,
+  "total_lines": 5924,
   "total_deleted": 607,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 33,
-      "lines": 4433,
+      "commits": 34,
+      "lines": 4537,
       "deleted": 328,
       "units": 2.45,
       "last_active": "2026-06-29",
-      "share_pct": 70.9,
+      "share_pct": 71.2,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 14.8,
+      "share_pct": 14.6,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.36,
       "last_active": "2026-06-29",
-      "share_pct": 7.8,
+      "share_pct": 7.7,
       "color": "#10b981",
       "pending": false
     },
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
+      "added": 104,
+      "deleted": 0
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "🧠 ядро",
       "added": 45,
       "deleted": 19
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "scripts",
-      "area_label": "🛠 скрипты",
-      "added": 13,
-      "deleted": 0
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          31
+          32
         ]
       },
       {
@@ -506,6 +506,14 @@
             "status": "live",
             "owner": "Алексей",
             "color": "#f59e0b"
+          },
+          {
+            "name": "Проактивное фото 📸",
+            "trigger": "изредка днём/вечером",
+            "desc": "Lumi иногда сама присылает селфи первой («скучала, вот я 🙈») — бесплатно, как знак внимания. Уважает тихие часы и лимит проактива.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
           }
         ]
       },
