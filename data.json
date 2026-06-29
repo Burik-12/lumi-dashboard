@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 18:22 UTC",
-  "total_commits": 47,
-  "total_lines": 6097,
-  "total_deleted": 618,
+  "generated_at": "2026-06-29 18:23 UTC",
+  "total_commits": 48,
+  "total_lines": 6127,
+  "total_deleted": 622,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 38,
-      "lines": 4710,
-      "deleted": 339,
+      "commits": 39,
+      "lines": 4740,
+      "deleted": 343,
       "units": 2.45,
       "last_active": "2026-06-29",
-      "share_pct": 72.0,
+      "share_pct": 72.1,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 14.1,
+      "share_pct": 14.0,
       "color": "#a855f7",
       "pending": false
     },
@@ -161,6 +161,15 @@
       "color": "#2563eb",
       "area": "bot",
       "area_label": "🤖 бот",
+      "added": 30,
+      "deleted": 4
+    },
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
       "added": 47,
       "deleted": 4
     },
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 206,
       "deleted": 6
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": ".github",
-      "area_label": ".github",
-      "added": 57,
-      "deleted": 0
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          36
+          37
         ]
       },
       {
