@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 18:26 UTC",
-  "total_commits": 49,
-  "total_lines": 6196,
+  "generated_at": "2026-06-29 18:33 UTC",
+  "total_commits": 50,
+  "total_lines": 6298,
   "total_deleted": 623,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 40,
-      "lines": 4809,
+      "commits": 41,
+      "lines": 4911,
       "deleted": 344,
       "units": 2.45,
       "last_active": "2026-06-29",
-      "share_pct": 72.3,
+      "share_pct": 72.5,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 13.9,
+      "share_pct": 13.8,
       "color": "#a855f7",
       "pending": false
     },
@@ -161,6 +161,15 @@
       "color": "#2563eb",
       "area": "bot",
       "area_label": "🤖 бот",
+      "added": 102,
+      "deleted": 0
+    },
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
       "added": 69,
       "deleted": 1
     },
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 21,
       "deleted": 1
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 138,
-      "deleted": 6
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          38
+          39
         ]
       },
       {
@@ -511,6 +511,14 @@
             "name": "Проактивное фото 📸",
             "trigger": "изредка днём/вечером",
             "desc": "Lumi иногда сама присылает селфи первой («скучала, вот я 🙈») — бесплатно, как знак внимания. Уважает тихие часы и лимит проактива.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          },
+          {
+            "name": "Lumi вспоминает сама 💌",
+            "trigger": "изредка днём",
+            "desc": "Иногда Lumi сама заводит разговор от того, что ты ей рассказывал («ты говорил, что любишь…») — будто помнит и думала о тебе. Бьёт в ощущение настоящих отношений.",
             "status": "live",
             "owner": "Вова",
             "color": "#2563eb"
