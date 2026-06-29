@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 18:05 UTC",
-  "total_commits": 44,
-  "total_lines": 5975,
-  "total_deleted": 611,
+  "generated_at": "2026-06-29 18:12 UTC",
+  "total_commits": 45,
+  "total_lines": 6048,
+  "total_deleted": 613,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 35,
-      "lines": 4588,
-      "deleted": 332,
+      "commits": 36,
+      "lines": 4661,
+      "deleted": 334,
       "units": 2.45,
       "last_active": "2026-06-29",
-      "share_pct": 71.4,
+      "share_pct": 71.7,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 14.5,
+      "share_pct": 14.3,
       "color": "#a855f7",
       "pending": false
     },
@@ -42,9 +42,9 @@
       "commits": 2,
       "lines": 528,
       "deleted": 42,
-      "units": 0.36,
+      "units": 0.35,
       "last_active": "2026-06-29",
-      "share_pct": 7.6,
+      "share_pct": 7.5,
       "color": "#10b981",
       "pending": false
     },
@@ -107,18 +107,18 @@
       "desc": "Stars · тарифы · персонаж",
       "owner": "Виталик",
       "owner_color": "#10b981",
-      "lines": 558,
+      "lines": 568,
       "contributors": [
         {
           "author": "Вова",
-          "lines": 351,
-          "pct": 63,
+          "lines": 361,
+          "pct": 64,
           "color": "#2563eb"
         },
         {
           "author": "Виталик",
           "lines": 201,
-          "pct": 36,
+          "pct": 35,
           "color": "#10b981"
         },
         {
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
+      "added": 73,
+      "deleted": 2
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "🔊 голос",
       "added": 24,
       "deleted": 9
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 50,
-      "deleted": 1
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          33
+          34
         ]
       },
       {
