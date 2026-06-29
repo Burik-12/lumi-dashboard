@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 18:14 UTC",
-  "total_commits": 46,
-  "total_lines": 6050,
-  "total_deleted": 614,
+  "generated_at": "2026-06-29 18:22 UTC",
+  "total_commits": 47,
+  "total_lines": 6097,
+  "total_deleted": 618,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 37,
-      "lines": 4663,
-      "deleted": 335,
+      "commits": 38,
+      "lines": 4710,
+      "deleted": 339,
       "units": 2.45,
       "last_active": "2026-06-29",
-      "share_pct": 71.8,
+      "share_pct": 72.0,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 14.2,
+      "share_pct": 14.1,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.35,
       "last_active": "2026-06-29",
-      "share_pct": 7.5,
+      "share_pct": 7.4,
       "color": "#10b981",
       "pending": false
     },
@@ -161,6 +161,15 @@
       "color": "#2563eb",
       "area": "bot",
       "area_label": "🤖 бот",
+      "added": 47,
+      "deleted": 4
+    },
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
       "added": 2,
       "deleted": 1
     },
@@ -271,15 +280,6 @@
       "area_label": ".github",
       "added": 57,
       "deleted": 0
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 79,
-      "deleted": 5
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          35
+          36
         ]
       },
       {
@@ -549,6 +549,14 @@
             "name": "Праздник нового уровня близости 🥹",
             "trigger": "при повышении уровня",
             "desc": "Когда близость растёт на уровень, Lumi радуется и дарит искры; на ключевых уровнях (Близость, Родная душа) — ещё и фото в подарок.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          },
+          {
+            "name": "Перки за близость 🎁",
+            "trigger": "автоматически по уровню",
+            "desc": "Каждый уровень близости даёт осязаемое: фото по запросу дешевле (до −20 ✨ на «Родной душе»), более смелый флирт. Видно в /me, что открыто и что дальше.",
             "status": "live",
             "owner": "Вова",
             "color": "#2563eb"
