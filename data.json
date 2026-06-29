@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 16:48 UTC",
-  "total_commits": 30,
-  "total_lines": 4738,
-  "total_deleted": 544,
+  "generated_at": "2026-06-29 16:51 UTC",
+  "total_commits": 31,
+  "total_lines": 4788,
+  "total_deleted": 545,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 21,
-      "lines": 3351,
-      "deleted": 265,
+      "commits": 22,
+      "lines": 3401,
+      "deleted": 266,
       "units": 2.26,
       "last_active": "2026-06-29",
-      "share_pct": 64.8,
+      "share_pct": 65.2,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.84,
       "last_active": "2026-06-29",
-      "share_pct": 18.9,
+      "share_pct": 18.7,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.39,
       "last_active": "2026-06-29",
-      "share_pct": 9.3,
+      "share_pct": 9.2,
       "color": "#10b981",
       "pending": false
     },
@@ -55,7 +55,7 @@
       "deleted": 23,
       "units": 0.51,
       "last_active": "2026-06-29",
-      "share_pct": 7.1,
+      "share_pct": 7.0,
       "color": "#f59e0b",
       "pending": false
     }
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
+      "added": 50,
+      "deleted": 1
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 83,
       "deleted": 0
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Дима",
-      "color": "#a855f7",
-      "area": "media",
-      "area_label": "🖼 медиа",
-      "added": 284,
-      "deleted": 0
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          19
+          20
         ]
       },
       {
