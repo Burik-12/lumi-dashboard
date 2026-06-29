@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 16:42 UTC",
-  "total_commits": 28,
-  "total_lines": 4680,
+  "generated_at": "2026-06-29 16:44 UTC",
+  "total_commits": 29,
+  "total_lines": 4693,
   "total_deleted": 525,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 19,
-      "lines": 3293,
+      "commits": 20,
+      "lines": 3306,
       "deleted": 246,
       "units": 2.26,
       "last_active": "2026-06-29",
-      "share_pct": 64.0,
+      "share_pct": 64.4,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.84,
       "last_active": "2026-06-29",
-      "share_pct": 19.4,
+      "share_pct": 19.1,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.39,
       "last_active": "2026-06-29",
-      "share_pct": 9.5,
+      "share_pct": 9.4,
       "color": "#10b981",
       "pending": false
     },
@@ -161,6 +161,15 @@
       "color": "#2563eb",
       "area": "scripts",
       "area_label": "🛠 скрипты",
+      "added": 13,
+      "deleted": 0
+    },
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "scripts",
+      "area_label": "🛠 скрипты",
       "added": 17,
       "deleted": 3
     },
@@ -271,15 +280,6 @@
       "area_label": "⭐ биллинг",
       "added": 6,
       "deleted": 1
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Дима",
-      "color": "#a855f7",
-      "area": "requirements.txt",
-      "area_label": "requirements.txt",
-      "added": 3,
-      "deleted": 0
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          17
+          18
         ]
       },
       {
@@ -474,6 +474,20 @@
             "status": "live",
             "owner": "Алексей",
             "color": "#f59e0b"
+          }
+        ]
+      },
+      {
+        "key": "engagement",
+        "label": "🔥 Вовлечение",
+        "features": [
+          {
+            "name": "Стрик дней общения",
+            "trigger": "заход раз в день",
+            "desc": "Считает серию дней подряд и каждый день дарит бонус искр («N дней вместе, лови ✨»), чтобы возвращались.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
           }
         ]
       },
