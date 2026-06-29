@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 17:34 UTC",
-  "total_commits": 39,
-  "total_lines": 5543,
-  "total_deleted": 590,
+  "generated_at": "2026-06-29 17:43 UTC",
+  "total_commits": 40,
+  "total_lines": 5673,
+  "total_deleted": 591,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 30,
-      "lines": 4156,
-      "deleted": 311,
+      "commits": 31,
+      "lines": 4286,
+      "deleted": 312,
       "units": 2.42,
       "last_active": "2026-06-29",
-      "share_pct": 69.8,
+      "share_pct": 70.1,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.71,
       "last_active": "2026-06-29",
-      "share_pct": 15.5,
+      "share_pct": 15.3,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.36,
       "last_active": "2026-06-29",
-      "share_pct": 8.0,
+      "share_pct": 7.9,
       "color": "#10b981",
       "pending": false
     },
@@ -55,7 +55,7 @@
       "deleted": 23,
       "units": 0.51,
       "last_active": "2026-06-29",
-      "share_pct": 6.7,
+      "share_pct": 6.6,
       "color": "#f59e0b",
       "pending": false
     }
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
+      "added": 130,
+      "deleted": 1
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 83,
       "deleted": 2
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "billing",
-      "area_label": "⭐ биллинг",
-      "added": 17,
-      "deleted": 2
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          28
+          29
         ]
       },
       {
@@ -441,6 +441,14 @@
             "name": "Фото Lumi — сразу и бесплатно",
             "trigger": "/selfie, покупка в /shop",
             "desc": "Реальная генерация фото прямо в боте через бесплатный Pollinations.ai (без ключа и оплаты) — приходит за ~минуту. Первое селфи бесплатно, дальше фото-пакет за искры.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          },
+          {
+            "name": "Фото по запросу 🎨",
+            "trigger": "/photo <сцена> или «сфоткайся на пляже»",
+            "desc": "Lumi фоткается под твою сцену: место, одежда, настроение. Внешность персонажа + запрос → фото. Первое бесплатно, дальше за искры — персонаж под себя.",
             "status": "live",
             "owner": "Вова",
             "color": "#2563eb"
