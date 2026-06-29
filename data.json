@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 20:19 UTC",
-  "total_commits": 60,
-  "total_lines": 7495,
-  "total_deleted": 672,
+  "generated_at": "2026-06-29 20:20 UTC",
+  "total_commits": 61,
+  "total_lines": 7623,
+  "total_deleted": 675,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 50,
-      "lines": 5946,
-      "deleted": 381,
+      "commits": 51,
+      "lines": 6074,
+      "deleted": 384,
       "units": 2.43,
       "last_active": "2026-06-30",
-      "share_pct": 73.1,
+      "share_pct": 73.3,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 12.6,
+      "share_pct": 12.5,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 54,
       "units": 0.38,
       "last_active": "2026-06-30",
-      "share_pct": 8.1,
+      "share_pct": 8.0,
       "color": "#10b981",
       "pending": false
     },
@@ -161,6 +161,15 @@
       "color": "#2563eb",
       "area": "bot",
       "area_label": "🤖 бот",
+      "added": 128,
+      "deleted": 3
+    },
+    {
+      "date": "2026-06-30",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
       "added": 107,
       "deleted": 1
     },
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 30,
       "deleted": 4
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 47,
-      "deleted": 4
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          48
+          49
         ]
       },
       {
@@ -353,6 +353,13 @@
     ]
   },
   "open_prs": [
+    {
+      "number": 52,
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "feat",
+      "area_label": "feat"
+    },
     {
       "number": 51,
       "author": "Вова",
