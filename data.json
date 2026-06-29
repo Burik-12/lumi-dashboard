@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 16:41 UTC",
-  "total_commits": 27,
-  "total_lines": 4663,
-  "total_deleted": 522,
+  "generated_at": "2026-06-29 16:42 UTC",
+  "total_commits": 28,
+  "total_lines": 4680,
+  "total_deleted": 525,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 18,
-      "lines": 3276,
-      "deleted": 243,
+      "commits": 19,
+      "lines": 3293,
+      "deleted": 246,
       "units": 2.26,
       "last_active": "2026-06-29",
-      "share_pct": 63.6,
+      "share_pct": 64.0,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.84,
       "last_active": "2026-06-29",
-      "share_pct": 19.6,
+      "share_pct": 19.4,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.39,
       "last_active": "2026-06-29",
-      "share_pct": 9.6,
+      "share_pct": 9.5,
       "color": "#10b981",
       "pending": false
     },
@@ -55,7 +55,7 @@
       "deleted": 23,
       "units": 0.51,
       "last_active": "2026-06-29",
-      "share_pct": 7.2,
+      "share_pct": 7.1,
       "color": "#f59e0b",
       "pending": false
     }
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "scripts",
+      "area_label": "🛠 скрипты",
+      "added": 17,
+      "deleted": 3
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "requirements.txt",
       "added": 3,
       "deleted": 0
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "dashboard",
-      "area_label": "📊 дашборд",
-      "added": 322,
-      "deleted": 58
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          16
+          17
         ]
       },
       {
@@ -523,9 +523,25 @@
           },
           {
             "name": "Энергия ⚡",
-            "trigger": "в разработке",
-            "desc": "Ресурс на общение: хранится у пользователя, докупается в витрине; расход пока не подключён.",
-            "status": "wip",
+            "trigger": "каждое сообщение",
+            "desc": "Каждое сообщение тратит энергию. Кончилась — Lumi просит пополнить; докупается в витрине (+100 за 50 искр).",
+            "status": "live",
+            "owner": "Виталик",
+            "color": "#10b981"
+          },
+          {
+            "name": "Lumi зовёт в витрину",
+            "trigger": "при низкой энергии",
+            "desc": "Мягкий апсейл: когда энергия на исходе, Lumi сама пишет «загляни в /shop», изредка намекает на фото.",
+            "status": "live",
+            "owner": "Виталик",
+            "color": "#10b981"
+          },
+          {
+            "name": "Оффер новичку: пополнение ×2",
+            "trigger": "первое пополнение в /shop",
+            "desc": "Первое пополнение искр удваивается, с баннером-оффером — чтобы подтолкнуть к первой покупке.",
+            "status": "live",
             "owner": "Виталик",
             "color": "#10b981"
           }
