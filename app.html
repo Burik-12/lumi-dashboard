@@ -103,6 +103,7 @@
   .tier-name { font-size: 18px; font-weight: 700; }
   .price { font-size: 20px; font-weight: 800; white-space: nowrap; }
   .price .star { color: var(--star); }
+  .price .per-month { font-size: 13px; font-weight: 400; color: var(--dim); }
   .feats { list-style: none; margin: 12px 0 16px; display: grid; gap: 8px; }
   .feats li { display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: #ded8ee; }
   .feats li::before { content: "✦"; color: var(--accent-2); font-size: 13px; line-height: 1.5; }
@@ -215,6 +216,22 @@
     <section class="panel" id="sub">
       <p class="section-hint">Выбери тариф — оплата звёздами Telegram ⭐, без карт и комиссий банков.</p>
 
+      <!-- Близость+ — главный рекомендуемый тариф -->
+      <div class="card popular">
+        <div class="badge">рекомендуем</div>
+        <div class="card-top">
+          <div class="tier-name">💝 Близость+</div>
+          <div class="price">15 <span class="star">⭐</span><span class="per-month">/мес</span></div>
+        </div>
+        <ul class="feats">
+          <li>📸 Фото от Lumi каждое утро</li>
+          <li>🗣 Голосовые признания — без ограничений</li>
+          <li>💞 Близость растёт в 1.5× быстрее</li>
+          <li>🤝 Месяц — потом легко отменить</li>
+        </ul>
+        <button class="btn" onclick="buyCloseness()">Оформить за 15 ⭐</button>
+      </div>
+
       <div class="card">
         <div class="card-top">
           <div class="tier-name">Base</div>
@@ -229,8 +246,7 @@
         <button class="btn ghost" onclick="buy('base')">Купить Base</button>
       </div>
 
-      <div class="card popular">
-        <div class="badge">популярный</div>
+      <div class="card">
         <div class="card-top">
           <div class="tier-name">Premium</div>
           <div class="price">5 <span class="star">⭐</span></div>
@@ -240,7 +256,7 @@
           <li>Фото персонажа по запросу</li>
           <li class="off">Голосовые</li>
         </ul>
-        <button class="btn" onclick="buy('premium')">Купить Premium</button>
+        <button class="btn ghost" onclick="buy('premium')">Купить Premium</button>
       </div>
 
       <div class="card">
@@ -348,6 +364,15 @@
       tg.sendData(JSON.stringify({ action: "buy_sparks", pack: pack }));
     } else {
       toast("✨ пакет " + pack + " — тут откроется оплата Telegram Stars");
+    }
+  }
+
+  function buyCloseness() {
+    haptic("ok");
+    if (inTelegram) {
+      tg.sendData(JSON.stringify({ action: "buy_closeness_plus" }));
+    } else {
+      toast("💝 Близость+ — тут откроется оплата Telegram Stars");
     }
   }
 

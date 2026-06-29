@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 19:15 UTC",
-  "total_commits": 57,
-  "total_lines": 6972,
-  "total_deleted": 663,
+  "generated_at": "2026-06-29 20:00 UTC",
+  "total_commits": 58,
+  "total_lines": 7212,
+  "total_deleted": 670,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 47,
-      "lines": 5423,
-      "deleted": 372,
-      "units": 2.34,
-      "last_active": "2026-06-29",
-      "share_pct": 71.5,
+      "commits": 48,
+      "lines": 5663,
+      "deleted": 379,
+      "units": 2.43,
+      "last_active": "2026-06-30",
+      "share_pct": 72.7,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 13.0,
+      "share_pct": 12.8,
       "color": "#a855f7",
       "pending": false
     },
@@ -42,9 +42,9 @@
       "commits": 3,
       "lines": 690,
       "deleted": 54,
-      "units": 0.47,
+      "units": 0.38,
       "last_active": "2026-06-30",
-      "share_pct": 9.2,
+      "share_pct": 8.3,
       "color": "#10b981",
       "pending": false
     },
@@ -55,7 +55,7 @@
       "deleted": 23,
       "units": 0.51,
       "last_active": "2026-06-29",
-      "share_pct": 6.3,
+      "share_pct": 6.2,
       "color": "#f59e0b",
       "pending": false
     }
@@ -107,18 +107,18 @@
       "desc": "Stars · тарифы · персонаж",
       "owner": "Виталик",
       "owner_color": "#10b981",
-      "lines": 709,
+      "lines": 864,
       "contributors": [
         {
           "author": "Вова",
-          "lines": 372,
-          "pct": 52,
+          "lines": 527,
+          "pct": 61,
           "color": "#2563eb"
         },
         {
           "author": "Виталик",
           "lines": 331,
-          "pct": 47,
+          "pct": 38,
           "color": "#10b981"
         },
         {
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-30",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
+      "added": 240,
+      "deleted": 7
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 73,
       "deleted": 2
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 51,
-      "deleted": 4
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          45
+          46
         ]
       },
       {
@@ -352,7 +352,15 @@
       }
     ]
   },
-  "open_prs": [],
+  "open_prs": [
+    {
+      "number": 49,
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "feat",
+      "area_label": "feat"
+    }
+  ],
   "features": {
     "_комментарий": "РЕЕСТР ВОЗМОЖНОСТЕЙ LUMI — что умеет бот. Это источник правды для секции «Что умеет Lumi» на дашборде. ПРАВИЛО: добавил или изменил фичу в боте — обнови этот файл (категория/название/триггер/описание/статус/owner). Дашборд пересоберётся скриптом build_dashboard.py (или Action при push). status: live = работает, external = работает, но нужен внешний воркер, wip = в работе/заглушка. owner — кто отвечает за модуль (цвет берётся из contribution_config.json).",
     "intro": "Lumi — живой AI-компаньон в Telegram. Вот что она уже умеет:",
@@ -408,6 +416,14 @@
             "status": "live",
             "owner": "Виталик",
             "color": "#10b981"
+          },
+          {
+            "name": "💝 Подписка «Близость+»",
+            "trigger": "/subscribe и кнопка в Mini App",
+            "desc": "Месячный Premium за Stars: ежедневное авто-фото в 10:00, голосовые признания бесплатно, +50% очков близости за каждое сообщение. MRR = предсказуемый доход, продление не обрывает дни.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
           },
           {
             "name": "Меню-кнопки",
