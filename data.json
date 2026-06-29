@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 15:40 UTC",
-  "total_commits": 18,
-  "total_lines": 3931,
-  "total_deleted": 482,
+  "generated_at": "2026-06-29 15:43 UTC",
+  "total_commits": 19,
+  "total_lines": 3934,
+  "total_deleted": 485,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 9,
-      "lines": 2544,
-      "deleted": 203,
+      "commits": 10,
+      "lines": 2547,
+      "deleted": 206,
       "units": 1.91,
       "last_active": "2026-06-29",
-      "share_pct": 53.5,
+      "share_pct": 54.3,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.85,
       "last_active": "2026-06-29",
-      "share_pct": 23.9,
+      "share_pct": 23.4,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.73,
       "last_active": "2026-06-29",
-      "share_pct": 14.7,
+      "share_pct": 14.5,
       "color": "#10b981",
       "pending": false
     },
@@ -55,7 +55,7 @@
       "deleted": 23,
       "units": 0.51,
       "last_active": "2026-06-29",
-      "share_pct": 7.9,
+      "share_pct": 7.8,
       "color": "#f59e0b",
       "pending": false
     }
@@ -238,6 +238,15 @@
     },
     {
       "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "dashboard",
+      "area_label": "📊 дашборд",
+      "added": 3,
+      "deleted": 3
+    },
+    {
+      "date": "2026-06-29",
       "author": "Дима",
       "color": "#a855f7",
       "area": "telegram-bot",
@@ -271,15 +280,6 @@
       "area_label": "📨 проактив",
       "added": 115,
       "deleted": 18
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Виталик",
-      "color": "#10b981",
-      "area": "billing",
-      "area_label": "⭐ биллинг",
-      "added": 141,
-      "deleted": 8
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          7
+          8
         ]
       },
       {
