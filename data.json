@@ -8,9 +8,9 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 15:29 UTC",
-  "total_commits": 12,
-  "total_lines": 3401,
+  "generated_at": "2026-06-29 15:30 UTC",
+  "total_commits": 13,
+  "total_lines": 3404,
   "total_deleted": 457,
   "modules_active": 4,
   "modules_total": 4,
@@ -22,7 +22,7 @@
       "deleted": 202,
       "units": 3.25,
       "last_active": "2026-06-29",
-      "share_pct": 75.0,
+      "share_pct": 73.4,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,18 +33,18 @@
       "deleted": 42,
       "units": 0.75,
       "last_active": "2026-06-29",
-      "share_pct": 17.1,
+      "share_pct": 16.7,
       "color": "#10b981",
       "pending": false
     },
     {
       "author": "Di",
-      "commits": 2,
-      "lines": 330,
+      "commits": 3,
+      "lines": 333,
       "deleted": 213,
       "units": 0.0,
       "last_active": "2026-06-29",
-      "share_pct": 7.9,
+      "share_pct": 9.9,
       "color": "#f59e0b",
       "pending": false
     },
@@ -148,6 +148,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Di",
+      "color": "#f59e0b",
+      "area": "requirements.txt",
+      "area_label": "requirements.txt",
+      "added": 3,
+      "deleted": 0
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -308,11 +317,19 @@
           0,
           0,
           0,
-          2
+          3
         ]
       }
     ]
   },
-  "open_prs": [],
+  "open_prs": [
+    {
+      "number": 10,
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "dashboard",
+      "area_label": "📊 дашборд"
+    }
+  ],
   "single_author_warning": false
 }
