@@ -8,9 +8,9 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 15:31 UTC",
-  "total_commits": 14,
-  "total_lines": 3410,
+  "generated_at": "2026-06-29 15:34 UTC",
+  "total_commits": 15,
+  "total_lines": 3694,
   "total_deleted": 458,
   "modules_active": 4,
   "modules_total": 4,
@@ -20,10 +20,21 @@
       "commits": 8,
       "lines": 2543,
       "deleted": 202,
-      "units": 3.25,
+      "units": 2.45,
       "last_active": "2026-06-29",
-      "share_pct": 72.0,
+      "share_pct": 61.2,
       "color": "#2563eb",
+      "pending": false
+    },
+    {
+      "author": "Di",
+      "commits": 5,
+      "lines": 623,
+      "deleted": 214,
+      "units": 0.82,
+      "last_active": "2026-06-29",
+      "share_pct": 23.2,
+      "color": "#10b981",
       "pending": false
     },
     {
@@ -33,19 +44,8 @@
       "deleted": 42,
       "units": 0.73,
       "last_active": "2026-06-29",
-      "share_pct": 16.2,
+      "share_pct": 15.6,
       "color": "#10b981",
-      "pending": false
-    },
-    {
-      "author": "Di",
-      "commits": 4,
-      "lines": 339,
-      "deleted": 214,
-      "units": 0.02,
-      "last_active": "2026-06-29",
-      "share_pct": 11.8,
-      "color": "#f59e0b",
       "pending": false
     },
     {
@@ -130,7 +130,7 @@
           "author": "Di",
           "lines": 6,
           "pct": 2,
-          "color": "#f59e0b"
+          "color": "#10b981"
         }
       ],
       "started": true
@@ -141,12 +141,18 @@
       "desc": "фото-генерация",
       "owner": "Дима",
       "owner_color": "#a855f7",
-      "lines": 74,
+      "lines": 358,
       "contributors": [
+        {
+          "author": "Di",
+          "lines": 284,
+          "pct": 79,
+          "color": "#10b981"
+        },
         {
           "author": "Вова",
           "lines": 74,
-          "pct": 100,
+          "pct": 21,
           "color": "#2563eb"
         }
       ],
@@ -157,7 +163,16 @@
     {
       "date": "2026-06-29",
       "author": "Di",
-      "color": "#f59e0b",
+      "color": "#10b981",
+      "area": "media",
+      "area_label": "🖼 медиа",
+      "added": 284,
+      "deleted": 0
+    },
+    {
+      "date": "2026-06-29",
+      "author": "Di",
+      "color": "#10b981",
       "area": "billing",
       "area_label": "⭐ биллинг",
       "added": 6,
@@ -166,7 +181,7 @@
     {
       "date": "2026-06-29",
       "author": "Di",
-      "color": "#f59e0b",
+      "color": "#10b981",
       "area": "requirements.txt",
       "area_label": "requirements.txt",
       "added": 3,
@@ -184,7 +199,7 @@
     {
       "date": "2026-06-29",
       "author": "Di",
-      "color": "#f59e0b",
+      "color": "#10b981",
       "area": "telegram-bot",
       "area_label": "telegram-bot",
       "added": 2,
@@ -202,7 +217,7 @@
     {
       "date": "2026-06-29",
       "author": "Di",
-      "color": "#f59e0b",
+      "color": "#10b981",
       "area": "telegram-bot",
       "area_label": "telegram-bot",
       "added": 328,
@@ -270,15 +285,6 @@
       "area_label": "🛠 скрипты",
       "added": 341,
       "deleted": 4
-    },
-    {
-      "date": "2026-06-27",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 569,
-      "deleted": 0
     }
   ],
   "activity": {
@@ -308,6 +314,20 @@
         ]
       },
       {
+        "author": "Di",
+        "color": "#10b981",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ]
+      },
+      {
         "author": "Виталик",
         "color": "#10b981",
         "data": [
@@ -319,20 +339,6 @@
           0,
           0,
           2
-        ]
-      },
-      {
-        "author": "Di",
-        "color": "#f59e0b",
-        "data": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          4
         ]
       }
     ]
