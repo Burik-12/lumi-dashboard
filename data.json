@@ -8,10 +8,10 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 15:30 UTC",
-  "total_commits": 13,
-  "total_lines": 3404,
-  "total_deleted": 457,
+  "generated_at": "2026-06-29 15:31 UTC",
+  "total_commits": 14,
+  "total_lines": 3410,
+  "total_deleted": 458,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
@@ -22,7 +22,7 @@
       "deleted": 202,
       "units": 3.25,
       "last_active": "2026-06-29",
-      "share_pct": 73.4,
+      "share_pct": 72.0,
       "color": "#2563eb",
       "pending": false
     },
@@ -31,20 +31,20 @@
       "commits": 2,
       "lines": 528,
       "deleted": 42,
-      "units": 0.75,
+      "units": 0.73,
       "last_active": "2026-06-29",
-      "share_pct": 16.7,
+      "share_pct": 16.2,
       "color": "#10b981",
       "pending": false
     },
     {
       "author": "Di",
-      "commits": 3,
-      "lines": 333,
-      "deleted": 213,
-      "units": 0.0,
+      "commits": 4,
+      "lines": 339,
+      "deleted": 214,
+      "units": 0.02,
       "last_active": "2026-06-29",
-      "share_pct": 9.9,
+      "share_pct": 11.8,
       "color": "#f59e0b",
       "pending": false
     },
@@ -112,12 +112,12 @@
       "desc": "Stars · тарифы · персонаж",
       "owner": "Виталик",
       "owner_color": "#10b981",
-      "lines": 269,
+      "lines": 275,
       "contributors": [
         {
           "author": "Виталик",
           "lines": 201,
-          "pct": 75,
+          "pct": 73,
           "color": "#10b981"
         },
         {
@@ -125,6 +125,12 @@
           "lines": 68,
           "pct": 25,
           "color": "#2563eb"
+        },
+        {
+          "author": "Di",
+          "lines": 6,
+          "pct": 2,
+          "color": "#f59e0b"
         }
       ],
       "started": true
@@ -148,6 +154,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Di",
+      "color": "#f59e0b",
+      "area": "billing",
+      "area_label": "⭐ биллинг",
+      "added": 6,
+      "deleted": 1
+    },
     {
       "date": "2026-06-29",
       "author": "Di",
@@ -317,19 +332,11 @@
           0,
           0,
           0,
-          3
+          4
         ]
       }
     ]
   },
-  "open_prs": [
-    {
-      "number": 10,
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "dashboard",
-      "area_label": "📊 дашборд"
-    }
-  ],
+  "open_prs": [],
   "single_author_warning": false
 }
