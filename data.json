@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 16:08 UTC",
-  "total_commits": 21,
-  "total_lines": 4021,
-  "total_deleted": 497,
+  "generated_at": "2026-06-29 16:17 UTC",
+  "total_commits": 22,
+  "total_lines": 4036,
+  "total_deleted": 498,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 12,
-      "lines": 2634,
-      "deleted": 218,
+      "commits": 13,
+      "lines": 2649,
+      "deleted": 219,
       "units": 1.91,
       "last_active": "2026-06-29",
-      "share_pct": 55.9,
+      "share_pct": 56.5,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.85,
       "last_active": "2026-06-29",
-      "share_pct": 22.4,
+      "share_pct": 22.0,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.73,
       "last_active": "2026-06-29",
-      "share_pct": 14.1,
+      "share_pct": 14.0,
       "color": "#10b981",
       "pending": false
     },
@@ -55,7 +55,7 @@
       "deleted": 23,
       "units": 0.51,
       "last_active": "2026-06-29",
-      "share_pct": 7.7,
+      "share_pct": 7.6,
       "color": "#f59e0b",
       "pending": false
     }
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "voice",
+      "area_label": "🔊 голос",
+      "added": 15,
+      "deleted": 1
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "telegram-bot",
       "added": 328,
       "deleted": 0
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "voice",
-      "area_label": "🔊 голос",
-      "added": 75,
-      "deleted": 1
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          10
+          11
         ]
       },
       {
