@@ -8,33 +8,33 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 15:36 UTC",
-  "total_commits": 16,
-  "total_lines": 3777,
-  "total_deleted": 458,
+  "generated_at": "2026-06-29 15:39 UTC",
+  "total_commits": 17,
+  "total_lines": 3778,
+  "total_deleted": 459,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 8,
-      "lines": 2543,
-      "deleted": 202,
+      "commits": 9,
+      "lines": 2544,
+      "deleted": 203,
       "units": 2.42,
       "last_active": "2026-06-29",
-      "share_pct": 59.4,
+      "share_pct": 60.3,
       "color": "#2563eb",
       "pending": false
     },
     {
-      "author": "Di",
+      "author": "Дима",
       "commits": 6,
       "lines": 706,
       "deleted": 214,
       "units": 0.85,
       "last_active": "2026-06-29",
-      "share_pct": 25.4,
-      "color": "#10b981",
+      "share_pct": 24.7,
+      "color": "#a855f7",
       "pending": false
     },
     {
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.73,
       "last_active": "2026-06-29",
-      "share_pct": 15.3,
+      "share_pct": 15.0,
       "color": "#10b981",
       "pending": false
     },
@@ -57,17 +57,6 @@
       "last_active": "",
       "share_pct": 0.0,
       "color": "#f59e0b",
-      "pending": true
-    },
-    {
-      "author": "Дима",
-      "commits": 0,
-      "lines": 0,
-      "deleted": 0,
-      "units": 0.0,
-      "last_active": "",
-      "share_pct": 0.0,
-      "color": "#a855f7",
       "pending": true
     }
   ],
@@ -127,10 +116,10 @@
           "color": "#2563eb"
         },
         {
-          "author": "Di",
+          "author": "Дима",
           "lines": 6,
           "pct": 2,
-          "color": "#10b981"
+          "color": "#a855f7"
         }
       ],
       "started": true
@@ -144,10 +133,10 @@
       "lines": 436,
       "contributors": [
         {
-          "author": "Di",
+          "author": "Дима",
           "lines": 362,
           "pct": 83,
-          "color": "#10b981"
+          "color": "#a855f7"
         },
         {
           "author": "Вова",
@@ -162,8 +151,17 @@
   "recent": [
     {
       "date": "2026-06-29",
-      "author": "Di",
-      "color": "#10b981",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": ".mailmap",
+      "area_label": ".mailmap",
+      "added": 1,
+      "deleted": 1
+    },
+    {
+      "date": "2026-06-29",
+      "author": "Дима",
+      "color": "#a855f7",
       "area": "bot",
       "area_label": "🤖 бот",
       "added": 83,
@@ -171,8 +169,8 @@
     },
     {
       "date": "2026-06-29",
-      "author": "Di",
-      "color": "#10b981",
+      "author": "Дима",
+      "color": "#a855f7",
       "area": "media",
       "area_label": "🖼 медиа",
       "added": 284,
@@ -180,8 +178,8 @@
     },
     {
       "date": "2026-06-29",
-      "author": "Di",
-      "color": "#10b981",
+      "author": "Дима",
+      "color": "#a855f7",
       "area": "billing",
       "area_label": "⭐ биллинг",
       "added": 6,
@@ -189,8 +187,8 @@
     },
     {
       "date": "2026-06-29",
-      "author": "Di",
-      "color": "#10b981",
+      "author": "Дима",
+      "color": "#a855f7",
       "area": "requirements.txt",
       "area_label": "requirements.txt",
       "added": 3,
@@ -207,8 +205,8 @@
     },
     {
       "date": "2026-06-29",
-      "author": "Di",
-      "color": "#10b981",
+      "author": "Дима",
+      "color": "#a855f7",
       "area": "telegram-bot",
       "area_label": "telegram-bot",
       "added": 2,
@@ -225,8 +223,8 @@
     },
     {
       "date": "2026-06-29",
-      "author": "Di",
-      "color": "#10b981",
+      "author": "Дима",
+      "color": "#a855f7",
       "area": "telegram-bot",
       "area_label": "telegram-bot",
       "added": 328,
@@ -276,15 +274,6 @@
       "area_label": "📄 доки",
       "added": 66,
       "deleted": 0
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "core",
-      "area_label": "🧠 ядро",
-      "added": 295,
-      "deleted": 21
     }
   ],
   "activity": {
@@ -310,12 +299,12 @@
           0,
           0,
           2,
-          6
+          7
         ]
       },
       {
-        "author": "Di",
-        "color": "#10b981",
+        "author": "Дима",
+        "color": "#a855f7",
         "data": [
           0,
           0,
