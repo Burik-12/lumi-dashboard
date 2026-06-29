@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 18:50 UTC",
-  "total_commits": 53,
-  "total_lines": 6623,
-  "total_deleted": 643,
+  "generated_at": "2026-06-29 18:53 UTC",
+  "total_commits": 54,
+  "total_lines": 6692,
+  "total_deleted": 645,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 43,
-      "lines": 5074,
-      "deleted": 352,
+      "commits": 44,
+      "lines": 5143,
+      "deleted": 354,
       "units": 2.34,
       "last_active": "2026-06-29",
-      "share_pct": 70.7,
+      "share_pct": 70.9,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 13.4,
+      "share_pct": 13.3,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 54,
       "units": 0.47,
       "last_active": "2026-06-30",
-      "share_pct": 9.6,
+      "share_pct": 9.5,
       "color": "#10b981",
       "pending": false
     },
@@ -161,6 +161,15 @@
       "color": "#2563eb",
       "area": "bot",
       "area_label": "🤖 бот",
+      "added": 69,
+      "deleted": 2
+    },
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
       "added": 103,
       "deleted": 3
     },
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 140,
       "deleted": 9
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 130,
-      "deleted": 1
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          41
+          42
         ]
       },
       {
@@ -541,6 +541,14 @@
             "name": "Стрик дней общения",
             "trigger": "заход раз в день",
             "desc": "Считает серию дней подряд и каждый день дарит бонус искр («N дней вместе, лови ✨»), чтобы возвращались.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          },
+          {
+            "name": "Этапы отношений 💍",
+            "trigger": "автоматически + в /me",
+            "desc": "Lumi помнит, с какого дня вы вместе: показывает «вместе N дней» и празднует годовщины (неделя, месяц, 100 дней, полгода, год) тёплым сообщением и искрами.",
             "status": "live",
             "owner": "Вова",
             "color": "#2563eb"
