@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--
+  Lumi 🌙 — Telegram Mini App (ПРОТОТИП, зона billing/Виталик).
+  Один самодостаточный файл: открывается и в браузере (превью), и как Mini App в Telegram.
+
+  Что уже работает:
+   - вкладки Подписка / Персонаж, тема Telegram, haptic, тосты;
+   - кнопка «Купить» → в Telegram вызовет окно оплаты Stars, в браузере покажет тост;
+   - «Сохранить персонажа» → в Telegram отправит данные боту (sendData), в браузере покажет тост.
+
+  TODO для боевого режима (отдельный шаг):
+   1) Бот createInvoiceLink(currency="XTR", ...) → отдаёт ссылку Mini App'у → tg.openInvoice(link).
+   2) Хэндлер web_app_data в боте: принять JSON персонажа из sendData → сохранить через persona_setup.
+   3) Кнопка/меню в боте, открывающая этот Mini App (web_app URL после хостинга).
+-->
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Lumi 🌙</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    /* фолбэк-палитра (ночь + лунный фиолет/розовый). Переопределяется темой Telegram. */
+    --bg: #0e0b16;
+    --bg-soft: #161121;
+    --card: #1d1730;
+    --card-2: #241c3a;
+    --line: rgba(255, 255, 255, 0.08);
+    --text: #f3f0fa;
+    --dim: #a79fbe;
+    --accent: #a78bfa;
+    --accent-2: #f0abfc;
+    --star: #ffd56b;
+    --grad: linear-gradient(135deg, #a78bfa 0%, #f0abfc 100%);
+    --ok: #5be4a0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; }
+  body {
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.45;
+    padding: env(safe-area-inset-top) 0 calc(28px + env(safe-area-inset-bottom));
+    overflow-x: hidden;
+  }
+  /* лунное свечение сверху */
+  body::before {
+    content: ""; position: fixed; top: -160px; left: 50%; transform: translateX(-50%);
+    width: 460px; height: 320px;
+    background: radial-gradient(closest-side, rgba(167, 139, 250, 0.32), transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+  .wrap { position: relative; z-index: 1; max-width: 460px; margin: 0 auto; padding: 0 18px; }
+
+  /* ── шапка ── */
+  header { text-align: center; padding: 26px 0 18px; }
+  .logo { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+  .logo .moon { filter: drop-shadow(0 0 14px rgba(240, 171, 252, 0.6)); }
+  .tagline { color: var(--dim); font-size: 13.5px; margin-top: 4px; }
+
+  /* ── табы ── */
+  .tabs {
+    display: flex; gap: 4px; padding: 4px; margin: 6px 0 22px;
+    background: var(--bg-soft); border: 1px solid var(--line); border-radius: 16px;
+  }
+  .tab {
+    flex: 1; padding: 11px; text-align: center; font-weight: 600; font-size: 14.5px;
+    color: var(--dim); background: transparent; border: 0; border-radius: 12px;
+    cursor: pointer; transition: color .2s, background .25s;
+  }
+  .tab.active { color: #1a1226; background: var(--grad); box-shadow: 0 6px 18px -6px rgba(167, 139, 250, 0.7); }
+
+  .panel { display: none; animation: rise .35s ease both; }
+  .panel.active { display: block; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  .section-hint { color: var(--dim); font-size: 13.5px; margin: 0 2px 16px; }
+
+  /* ── карточки тарифов ── */
+  .card {
+    position: relative; background: var(--card); border: 1px solid var(--line);
+    border-radius: 20px; padding: 18px 18px 16px; margin-bottom: 14px;
+    transition: transform .15s ease, border-color .25s;
+  }
+  .card:active { transform: scale(0.985); }
+  .card.popular {
+    border-color: transparent;
+    background:
+      linear-gradient(var(--card), var(--card)) padding-box,
+      var(--grad) border-box;
+    box-shadow: 0 14px 40px -22px rgba(167, 139, 250, 0.9);
+  }
+  .badge {
+    position: absolute; top: -10px; right: 16px; font-size: 11px; font-weight: 700;
+    letter-spacing: .4px; text-transform: uppercase; color: #1a1226;
+    background: var(--grad); padding: 4px 10px; border-radius: 999px;
+  }
+  .card-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .tier-name { font-size: 18px; font-weight: 700; }
+  .price { font-size: 20px; font-weight: 800; white-space: nowrap; }
+  .price .star { color: var(--star); }
+  .feats { list-style: none; margin: 12px 0 16px; display: grid; gap: 8px; }
+  .feats li { display: flex; gap: 9px; align-items: flex-start; font-size: 14px; color: #ded8ee; }
+  .feats li::before { content: "✦"; color: var(--accent-2); font-size: 13px; line-height: 1.5; }
+  .feats li.off { color: var(--dim); opacity: .55; }
+  .feats li.off::before { content: "·"; color: var(--dim); }
+
+  .btn {
+    width: 100%; padding: 13px; font-family: inherit; font-weight: 700; font-size: 15px;
+    color: #1a1226; background: var(--grad); border: 0; border-radius: 14px; cursor: pointer;
+    transition: transform .12s, filter .2s;
+  }
+  .btn:active { transform: translateY(1px) scale(.99); filter: brightness(1.05); }
+  .btn.ghost { color: var(--text); background: var(--card-2); border: 1px solid var(--line); }
+
+  .free-note { text-align: center; color: var(--dim); font-size: 12.5px; margin-top: 4px; }
+
+  /* ── каталог товаров за искры ── */
+  .goods { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 14px; }
+  .goods-title { color: var(--dim); font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; margin: 0 2px 10px; }
+  .good { display: flex; justify-content: space-between; align-items: center; gap: 10px;
+          padding: 11px 13px; background: var(--card-2); border: 1px solid var(--line);
+          border-radius: 12px; margin-bottom: 8px; font-size: 14px; }
+  .good b { color: var(--accent); font-weight: 600; font-size: 12.5px; white-space: nowrap; }
+
+  /* ── форма персонажа ── */
+  .field { margin-bottom: 16px; }
+  .field label { display: block; font-size: 13px; font-weight: 600; color: var(--dim); margin: 0 2px 7px; }
+  .field input, .field textarea {
+    width: 100%; font-family: inherit; font-size: 15px; color: var(--text);
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 13px 14px; resize: none; transition: border-color .2s, box-shadow .2s;
+  }
+  .field input::placeholder, .field textarea::placeholder { color: #6c6483; }
+  .field input:focus, .field textarea:focus {
+    outline: none; border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.18);
+  }
+  .field textarea { min-height: 76px; }
+  .persona-head { text-align: center; margin-bottom: 18px; }
+  .persona-head .big { font-size: 19px; font-weight: 700; }
+  .persona-head .sub { color: var(--dim); font-size: 13.5px; margin-top: 3px; }
+
+  /* ── тост ── */
+  #toast {
+    position: fixed; left: 50%; bottom: 26px; transform: translate(-50%, 30px);
+    background: #2a2140; color: var(--text); border: 1px solid var(--line);
+    padding: 12px 18px; border-radius: 14px; font-size: 14px; font-weight: 500;
+    max-width: 88%; text-align: center; opacity: 0; pointer-events: none;
+    transition: opacity .25s, transform .25s; z-index: 50;
+    box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .8);
+  }
+  #toast.show { opacity: 1; transform: translate(-50%, 0); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Lumi <span class="moon">🌙</span></div>
+      <div class="tagline">твой близкий AI-компаньон</div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="shop">Витрина</button>
+      <button class="tab" data-tab="sub">Подписка</button>
+      <button class="tab" data-tab="persona">Персонаж</button>
+    </div>
+
+    <!-- ВКЛАДКА: ВИТРИНА (искры + товары) -->
+    <section class="panel active" id="shop">
+      <p class="section-hint">Искры ✨ — валюта Lumi. Пополни звёздами ⭐ и трать на фото, сеты и голос.</p>
+
+      <div class="card">
+        <div class="card-top">
+          <div class="tier-name">100 ✨</div>
+          <div class="price">100 <span class="star">⭐</span></div>
+        </div>
+        <button class="btn ghost" onclick="buySparks('s100')">Пополнить</button>
+      </div>
+
+      <div class="card popular">
+        <div class="badge">выгодно</div>
+        <div class="card-top">
+          <div class="tier-name">600 ✨ <span style="color:var(--ok);font-size:13px;">+100 бонус</span></div>
+          <div class="price">500 <span class="star">⭐</span></div>
+        </div>
+        <button class="btn" onclick="buySparks('s500')">Пополнить</button>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <div class="tier-name">1300 ✨ <span style="color:var(--ok);font-size:13px;">+300 бонус</span></div>
+          <div class="price">1000 <span class="star">⭐</span></div>
+        </div>
+        <button class="btn ghost" onclick="buySparks('s1000')">Пополнить</button>
+      </div>
+
+      <p class="free-note">🎁 Первое пополнение — двойные искры!</p>
+
+      <div class="goods">
+        <div class="goods-title">На что потратить ✨ (прямо в чате)</div>
+        <div class="good"><span>📸 Фото по запросу</span><b>/photo · от 5 ✨</b></div>
+        <div class="good"><span>🎬 Фото-сет альбомом</span><b>/sets · от 40 ✨</b></div>
+        <div class="good"><span>🗣 Голосовое признание</span><b>/confession · от 10 ✨</b></div>
+        <div class="good"><span>⚡ +100 энергии</span><b>/shop · 50 ✨</b></div>
+        <div class="good"><span>🎨 Кастомизация</span><b>/shop · 200 ✨</b></div>
+      </div>
+    </section>
+
+    <!-- ВКЛАДКА: ПОДПИСКА -->
+    <section class="panel" id="sub">
+      <p class="section-hint">Выбери тариф — оплата звёздами Telegram ⭐, без карт и комиссий банков.</p>
+
+      <div class="card">
+        <div class="card-top">
+          <div class="tier-name">Base</div>
+          <div class="price">1 <span class="star">⭐</span></div>
+        </div>
+        <ul class="feats">
+          <li>Пишет первой весь день</li>
+          <li>Помнит всё о тебе</li>
+          <li class="off">Фото персонажа</li>
+          <li class="off">Голосовые</li>
+        </ul>
+        <button class="btn ghost" onclick="buy('base')">Купить Base</button>
+      </div>
+
+      <div class="card popular">
+        <div class="badge">популярный</div>
+        <div class="card-top">
+          <div class="tier-name">Premium</div>
+          <div class="price">5 <span class="star">⭐</span></div>
+        </div>
+        <ul class="feats">
+          <li>Всё из Base</li>
+          <li>Фото персонажа по запросу</li>
+          <li class="off">Голосовые</li>
+        </ul>
+        <button class="btn" onclick="buy('premium')">Купить Premium</button>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <div class="tier-name">VIP</div>
+          <div class="price">10 <span class="star">⭐</span></div>
+        </div>
+        <ul class="feats">
+          <li>Всё из Premium</li>
+          <li>Голосовые сообщения</li>
+          <li>Приоритет и ранний доступ</li>
+        </ul>
+        <button class="btn ghost" onclick="buy('vip')">Купить VIP</button>
+      </div>
+
+      <p class="free-note">Бесплатно — 20 сообщений в день</p>
+    </section>
+
+    <!-- ВКЛАДКА: ПЕРСОНАЖ -->
+    <section class="panel" id="persona">
+      <div class="persona-head">
+        <div class="big">Создай свою Lumi 🌙</div>
+        <div class="sub">какой ты хочешь её видеть?</div>
+      </div>
+
+      <div class="field">
+        <label for="p-name">Имя</label>
+        <input id="p-name" type="text" maxlength="64" placeholder="например, Лина" />
+      </div>
+      <div class="field">
+        <label for="p-char">Характер</label>
+        <textarea id="p-char" maxlength="400" placeholder="нежная, заботливая, с лёгким юмором…"></textarea>
+      </div>
+      <div class="field">
+        <label for="p-look">Внешность</label>
+        <textarea id="p-look" maxlength="400" placeholder="брюнетка, карие глаза, тёплая улыбка…"></textarea>
+      </div>
+      <button class="btn" onclick="savePersona()">Сохранить персонажа</button>
+    </section>
+  </div>
+
+  <div id="toast"></div>
+
+<script>
+  const tg = window.Telegram && window.Telegram.WebApp;
+  const inTelegram = !!(tg && tg.platform && tg.platform !== "unknown");
+
+  // ── интеграция с Telegram: тема + разворот ──
+  if (inTelegram) {
+    tg.ready();
+    tg.expand();
+    const p = tg.themeParams || {};
+    const root = document.documentElement.style;
+    if (p.bg_color) root.setProperty("--bg", p.bg_color);
+    if (p.secondary_bg_color) { root.setProperty("--bg-soft", p.secondary_bg_color); root.setProperty("--card", p.secondary_bg_color); }
+    if (p.text_color) root.setProperty("--text", p.text_color);
+    if (p.hint_color) root.setProperty("--dim", p.hint_color);
+    if (p.button_color) { root.setProperty("--accent", p.button_color); }
+  }
+
+  function haptic(type) {
+    if (inTelegram && tg.HapticFeedback) {
+      type === "ok" ? tg.HapticFeedback.notificationOccurred("success")
+                    : tg.HapticFeedback.impactOccurred("medium");
+    }
+  }
+
+  let toastTimer;
+  function toast(msg) {
+    const t = document.getElementById("toast");
+    t.textContent = msg; t.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove("show"), 2400);
+  }
+
+  // ── табы ──
+  document.querySelectorAll(".tab").forEach(btn => {
+    btn.addEventListener("click", () => {
+      haptic();
+      document.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+  });
+
+  // ── покупка тарифа ──
+  function buy(tier) {
+    haptic();
+    const name = tier.toUpperCase();
+    if (inTelegram) {
+      // Mini App открыт из reply-кнопки → шлём боту, он выставит инвойс Stars в чат.
+      // (sendData закрывает Mini App; инвойс прилетает в диалог с ботом.)
+      tg.sendData(JSON.stringify({ action: "buy", tier: tier }));
+    } else {
+      toast("💫 " + name + " — тут откроется оплата Telegram Stars");
+    }
+  }
+
+  // ── пополнение искр (пакеты за Stars) ──
+  function buySparks(pack) {
+    haptic("ok");
+    if (inTelegram) {
+      // бот поймает action:"buy_sparks" в web_app_data и выставит инвойс на искры.
+      tg.sendData(JSON.stringify({ action: "buy_sparks", pack: pack }));
+    } else {
+      toast("✨ пакет " + pack + " — тут откроется оплата Telegram Stars");
+    }
+  }
+
+  // ── сохранение персонажа ──
+  function savePersona() {
+    const data = {
+      type: "persona",
+      name: document.getElementById("p-name").value.trim(),
+      character: document.getElementById("p-char").value.trim(),
+      appearance: document.getElementById("p-look").value.trim()
+    };
+    if (!data.name) { toast("Сначала введи имя 🙂"); return; }
+    haptic("ok");
+    if (inTelegram) {
+      // бот поймает это в хэндлере web_app_data и сохранит через persona_setup
+      tg.sendData(JSON.stringify(data));
+      tg.close();
+    } else {
+      toast("✅ Сохранено (превью): " + data.name);
+    }
+  }
+</script>
+</body>
+</html>
