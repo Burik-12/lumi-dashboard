@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 18:01 UTC",
-  "total_commits": 43,
-  "total_lines": 5924,
-  "total_deleted": 607,
+  "generated_at": "2026-06-29 18:05 UTC",
+  "total_commits": 44,
+  "total_lines": 5975,
+  "total_deleted": 611,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 34,
-      "lines": 4537,
-      "deleted": 328,
+      "commits": 35,
+      "lines": 4588,
+      "deleted": 332,
       "units": 2.45,
       "last_active": "2026-06-29",
-      "share_pct": 71.2,
+      "share_pct": 71.4,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 14.6,
+      "share_pct": 14.5,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.36,
       "last_active": "2026-06-29",
-      "share_pct": 7.7,
+      "share_pct": 7.6,
       "color": "#10b981",
       "pending": false
     },
@@ -55,7 +55,7 @@
       "deleted": 23,
       "units": 0.51,
       "last_active": "2026-06-29",
-      "share_pct": 6.6,
+      "share_pct": 6.5,
       "color": "#f59e0b",
       "pending": false
     }
@@ -67,11 +67,11 @@
       "desc": "личность · диалог · память",
       "owner": "Вова",
       "owner_color": "#2563eb",
-      "lines": 322,
+      "lines": 323,
       "contributors": [
         {
           "author": "Вова",
-          "lines": 322,
+          "lines": 323,
           "pct": 100,
           "color": "#2563eb"
         }
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
+      "added": 51,
+      "deleted": 4
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 50,
       "deleted": 1
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "core",
-      "area_label": "🧠 ядро",
-      "added": 45,
-      "deleted": 19
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          32
+          33
         ]
       },
       {
@@ -541,6 +541,14 @@
             "name": "Личный профиль",
             "trigger": "/me",
             "desc": "Показывает уровень близости с полоской прогресса, стрик дней, баланс искр/энергии и что Lumi о тебе запомнила — виден рост отношений.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          },
+          {
+            "name": "Праздник нового уровня близости 🥹",
+            "trigger": "при повышении уровня",
+            "desc": "Когда близость растёт на уровень, Lumi радуется и дарит искры; на ключевых уровнях (Близость, Родная душа) — ещё и фото в подарок.",
             "status": "live",
             "owner": "Вова",
             "color": "#2563eb"
