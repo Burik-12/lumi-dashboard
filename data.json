@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 17:43 UTC",
-  "total_commits": 40,
-  "total_lines": 5673,
-  "total_deleted": 591,
+  "generated_at": "2026-06-29 17:50 UTC",
+  "total_commits": 41,
+  "total_lines": 5813,
+  "total_deleted": 600,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 31,
-      "lines": 4286,
-      "deleted": 312,
-      "units": 2.42,
+      "commits": 32,
+      "lines": 4426,
+      "deleted": 321,
+      "units": 2.44,
       "last_active": "2026-06-29",
-      "share_pct": 70.1,
+      "share_pct": 70.6,
       "color": "#2563eb",
       "pending": false
     },
@@ -31,9 +31,9 @@
       "commits": 6,
       "lines": 706,
       "deleted": 214,
-      "units": 0.71,
+      "units": 0.69,
       "last_active": "2026-06-29",
-      "share_pct": 15.3,
+      "share_pct": 15.0,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.36,
       "last_active": "2026-06-29",
-      "share_pct": 7.9,
+      "share_pct": 7.8,
       "color": "#10b981",
       "pending": false
     },
@@ -136,18 +136,18 @@
       "desc": "фото-генерация",
       "owner": "Дима",
       "owner_color": "#a855f7",
-      "lines": 519,
+      "lines": 531,
       "contributors": [
         {
           "author": "Дима",
           "lines": 362,
-          "pct": 70,
+          "pct": 68,
           "color": "#a855f7"
         },
         {
           "author": "Вова",
-          "lines": 157,
-          "pct": 30,
+          "lines": 169,
+          "pct": 32,
           "color": "#2563eb"
         }
       ],
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
+      "added": 140,
+      "deleted": 9
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "🛠 скрипты",
       "added": 17,
       "deleted": 3
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 83,
-      "deleted": 2
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          29
+          30
         ]
       },
       {
@@ -449,6 +449,14 @@
             "name": "Фото по запросу 🎨",
             "trigger": "/photo <сцена> или «сфоткайся на пляже»",
             "desc": "Lumi фоткается под твою сцену: место, одежда, настроение. Внешность персонажа + запрос → фото. Первое бесплатно, дальше за искры — персонаж под себя.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          },
+          {
+            "name": "Аватар персонажа 🖼",
+            "trigger": "/avatar (и в профиле /me)",
+            "desc": "У Lumi есть лицо: один сохранённый портрет по внешности персонажа. Показывается в профиле и по команде; кешируется (мгновенный повтор). Делает её живой, а не только текстом.",
             "status": "live",
             "owner": "Вова",
             "color": "#2563eb"
