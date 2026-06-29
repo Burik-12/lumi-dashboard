@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 16:51 UTC",
-  "total_commits": 31,
-  "total_lines": 4788,
-  "total_deleted": 545,
+  "generated_at": "2026-06-29 16:54 UTC",
+  "total_commits": 32,
+  "total_lines": 4812,
+  "total_deleted": 554,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 22,
-      "lines": 3401,
-      "deleted": 266,
-      "units": 2.26,
+      "commits": 23,
+      "lines": 3425,
+      "deleted": 275,
+      "units": 2.27,
       "last_active": "2026-06-29",
-      "share_pct": 65.2,
+      "share_pct": 65.6,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.84,
       "last_active": "2026-06-29",
-      "share_pct": 18.7,
+      "share_pct": 18.4,
       "color": "#a855f7",
       "pending": false
     },
@@ -42,9 +42,9 @@
       "commits": 2,
       "lines": 528,
       "deleted": 42,
-      "units": 0.39,
+      "units": 0.38,
       "last_active": "2026-06-29",
-      "share_pct": 9.2,
+      "share_pct": 9.0,
       "color": "#10b981",
       "pending": false
     },
@@ -107,18 +107,18 @@
       "desc": "Stars · тарифы · персонаж",
       "owner": "Виталик",
       "owner_color": "#10b981",
-      "lines": 510,
+      "lines": 524,
       "contributors": [
         {
           "author": "Вова",
-          "lines": 303,
-          "pct": 59,
+          "lines": 317,
+          "pct": 60,
           "color": "#2563eb"
         },
         {
           "author": "Виталик",
           "lines": 201,
-          "pct": 39,
+          "pct": 38,
           "color": "#10b981"
         },
         {
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "voice",
+      "area_label": "🔊 голос",
+      "added": 24,
+      "deleted": 9
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": ".mailmap",
       "added": 1,
       "deleted": 1
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Дима",
-      "color": "#a855f7",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 83,
-      "deleted": 0
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          20
+          21
         ]
       },
       {
