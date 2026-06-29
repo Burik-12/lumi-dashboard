@@ -8,10 +8,10 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 15:39 UTC",
-  "total_commits": 17,
-  "total_lines": 3778,
-  "total_deleted": 459,
+  "generated_at": "2026-06-29 15:40 UTC",
+  "total_commits": 18,
+  "total_lines": 3931,
+  "total_deleted": 482,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
@@ -20,9 +20,9 @@
       "commits": 9,
       "lines": 2544,
       "deleted": 203,
-      "units": 2.42,
+      "units": 1.91,
       "last_active": "2026-06-29",
-      "share_pct": 60.3,
+      "share_pct": 53.5,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.85,
       "last_active": "2026-06-29",
-      "share_pct": 24.7,
+      "share_pct": 23.9,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,20 +44,20 @@
       "deleted": 42,
       "units": 0.73,
       "last_active": "2026-06-29",
-      "share_pct": 15.0,
+      "share_pct": 14.7,
       "color": "#10b981",
       "pending": false
     },
     {
       "author": "Алексей",
-      "commits": 0,
-      "lines": 0,
-      "deleted": 0,
-      "units": 0.0,
-      "last_active": "",
-      "share_pct": 0.0,
+      "commits": 1,
+      "lines": 153,
+      "deleted": 23,
+      "units": 0.51,
+      "last_active": "2026-06-29",
+      "share_pct": 7.9,
       "color": "#f59e0b",
-      "pending": true
+      "pending": false
     }
   ],
   "modules": [
@@ -84,12 +84,18 @@
       "desc": "бот пишет первым",
       "owner": "Алексей",
       "owner_color": "#f59e0b",
-      "lines": 147,
+      "lines": 299,
       "contributors": [
+        {
+          "author": "Алексей",
+          "lines": 152,
+          "pct": 51,
+          "color": "#f59e0b"
+        },
         {
           "author": "Вова",
           "lines": 147,
-          "pct": 100,
+          "pct": 49,
           "color": "#2563eb"
         }
       ],
@@ -223,6 +229,15 @@
     },
     {
       "date": "2026-06-29",
+      "author": "Алексей",
+      "color": "#f59e0b",
+      "area": "proactive",
+      "area_label": "📨 проактив",
+      "added": 153,
+      "deleted": 23
+    },
+    {
+      "date": "2026-06-29",
       "author": "Дима",
       "color": "#a855f7",
       "area": "telegram-bot",
@@ -265,15 +280,6 @@
       "area_label": "⭐ биллинг",
       "added": 141,
       "deleted": 8
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "docs",
-      "area_label": "📄 доки",
-      "added": 66,
-      "deleted": 0
     }
   ],
   "activity": {
@@ -328,6 +334,20 @@
           0,
           0,
           2
+        ]
+      },
+      {
+        "author": "Алексей",
+        "color": "#f59e0b",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
         ]
       }
     ]
