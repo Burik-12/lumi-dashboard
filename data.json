@@ -8,9 +8,9 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 15:34 UTC",
-  "total_commits": 15,
-  "total_lines": 3694,
+  "generated_at": "2026-06-29 15:36 UTC",
+  "total_commits": 16,
+  "total_lines": 3777,
   "total_deleted": 458,
   "modules_active": 4,
   "modules_total": 4,
@@ -20,20 +20,20 @@
       "commits": 8,
       "lines": 2543,
       "deleted": 202,
-      "units": 2.45,
+      "units": 2.42,
       "last_active": "2026-06-29",
-      "share_pct": 61.2,
+      "share_pct": 59.4,
       "color": "#2563eb",
       "pending": false
     },
     {
       "author": "Di",
-      "commits": 5,
-      "lines": 623,
+      "commits": 6,
+      "lines": 706,
       "deleted": 214,
-      "units": 0.82,
+      "units": 0.85,
       "last_active": "2026-06-29",
-      "share_pct": 23.2,
+      "share_pct": 25.4,
       "color": "#10b981",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.73,
       "last_active": "2026-06-29",
-      "share_pct": 15.6,
+      "share_pct": 15.3,
       "color": "#10b981",
       "pending": false
     },
@@ -141,18 +141,18 @@
       "desc": "фото-генерация",
       "owner": "Дима",
       "owner_color": "#a855f7",
-      "lines": 358,
+      "lines": 436,
       "contributors": [
         {
           "author": "Di",
-          "lines": 284,
-          "pct": 79,
+          "lines": 362,
+          "pct": 83,
           "color": "#10b981"
         },
         {
           "author": "Вова",
           "lines": 74,
-          "pct": 21,
+          "pct": 17,
           "color": "#2563eb"
         }
       ],
@@ -160,6 +160,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Di",
+      "color": "#10b981",
+      "area": "bot",
+      "area_label": "🤖 бот",
+      "added": 83,
+      "deleted": 0
+    },
     {
       "date": "2026-06-29",
       "author": "Di",
@@ -276,15 +285,6 @@
       "area_label": "🧠 ядро",
       "added": 295,
       "deleted": 21
-    },
-    {
-      "date": "2026-06-28",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "scripts",
-      "area_label": "🛠 скрипты",
-      "added": 341,
-      "deleted": 4
     }
   ],
   "activity": {
@@ -324,7 +324,7 @@
           0,
           0,
           0,
-          5
+          6
         ]
       },
       {
