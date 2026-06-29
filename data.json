@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 18:33 UTC",
-  "total_commits": 50,
-  "total_lines": 6298,
-  "total_deleted": 623,
+  "generated_at": "2026-06-29 18:41 UTC",
+  "total_commits": 51,
+  "total_lines": 6358,
+  "total_deleted": 628,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 41,
-      "lines": 4911,
-      "deleted": 344,
+      "commits": 42,
+      "lines": 4971,
+      "deleted": 349,
       "units": 2.45,
       "last_active": "2026-06-29",
-      "share_pct": 72.5,
+      "share_pct": 72.7,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 13.8,
+      "share_pct": 13.7,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.35,
       "last_active": "2026-06-29",
-      "share_pct": 7.3,
+      "share_pct": 7.2,
       "color": "#10b981",
       "pending": false
     },
@@ -67,11 +67,11 @@
       "desc": "личность · диалог · память",
       "owner": "Вова",
       "owner_color": "#2563eb",
-      "lines": 323,
+      "lines": 334,
       "contributors": [
         {
           "author": "Вова",
-          "lines": 323,
+          "lines": 334,
           "pct": 100,
           "color": "#2563eb"
         }
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "core",
+      "area_label": "🧠 ядро",
+      "added": 60,
+      "deleted": 5
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 24,
       "deleted": 10
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 21,
-      "deleted": 1
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          39
+          40
         ]
       },
       {
@@ -389,6 +389,14 @@
             "name": "Персонаж под себя",
             "trigger": "/setup",
             "desc": "Пошагово создаёшь свою Lumi: имя, характер (игривая/нежная/с юмором) и внешность — черты уходят в её личность.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          },
+          {
+            "name": "Настроение дня 🎚",
+            "trigger": "автоматически каждый день",
+            "desc": "У Lumi каждый день свой вайб (игривое/нежное/скучающее/кокетливое…) — влияет на тон переписки. Стабильно в течение дня, меняется день ото дня. Видно в /me.",
             "status": "live",
             "owner": "Вова",
             "color": "#2563eb"
