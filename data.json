@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 17:18 UTC",
-  "total_commits": 38,
-  "total_lines": 5337,
-  "total_deleted": 582,
+  "generated_at": "2026-06-29 17:34 UTC",
+  "total_commits": 39,
+  "total_lines": 5543,
+  "total_deleted": 590,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 29,
-      "lines": 3950,
-      "deleted": 303,
-      "units": 2.27,
+      "commits": 30,
+      "lines": 4156,
+      "deleted": 311,
+      "units": 2.42,
       "last_active": "2026-06-29",
-      "share_pct": 67.8,
+      "share_pct": 69.8,
       "color": "#2563eb",
       "pending": false
     },
@@ -31,9 +31,9 @@
       "commits": 6,
       "lines": 706,
       "deleted": 214,
-      "units": 0.84,
+      "units": 0.71,
       "last_active": "2026-06-29",
-      "share_pct": 17.1,
+      "share_pct": 15.5,
       "color": "#a855f7",
       "pending": false
     },
@@ -42,9 +42,9 @@
       "commits": 2,
       "lines": 528,
       "deleted": 42,
-      "units": 0.38,
+      "units": 0.36,
       "last_active": "2026-06-29",
-      "share_pct": 8.3,
+      "share_pct": 8.0,
       "color": "#10b981",
       "pending": false
     },
@@ -107,18 +107,18 @@
       "desc": "Stars · тарифы · персонаж",
       "owner": "Виталик",
       "owner_color": "#10b981",
-      "lines": 529,
+      "lines": 558,
       "contributors": [
         {
           "author": "Вова",
-          "lines": 322,
-          "pct": 61,
+          "lines": 351,
+          "pct": 63,
           "color": "#2563eb"
         },
         {
           "author": "Виталик",
           "lines": 201,
-          "pct": 38,
+          "pct": 36,
           "color": "#10b981"
         },
         {
@@ -136,18 +136,18 @@
       "desc": "фото-генерация",
       "owner": "Дима",
       "owner_color": "#a855f7",
-      "lines": 436,
+      "lines": 519,
       "contributors": [
         {
           "author": "Дима",
           "lines": 362,
-          "pct": 83,
+          "pct": 70,
           "color": "#a855f7"
         },
         {
           "author": "Вова",
-          "lines": 74,
-          "pct": 17,
+          "lines": 157,
+          "pct": 30,
           "color": "#2563eb"
         }
       ],
@@ -155,6 +155,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
+      "added": 206,
+      "deleted": 8
+    },
     {
       "date": "2026-06-29",
       "author": "Вова",
@@ -271,15 +280,6 @@
       "area_label": "⭐ биллинг",
       "added": 17,
       "deleted": 2
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "dashboard",
-      "area_label": "📊 дашборд",
-      "added": 264,
-      "deleted": 14
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          27
+          28
         ]
       },
       {
@@ -400,6 +400,14 @@
             "status": "wip",
             "owner": "Виталик",
             "color": "#10b981"
+          },
+          {
+            "name": "Меню-кнопки",
+            "trigger": "/menu (и при /start)",
+            "desc": "Постоянная клавиатура внизу чата: Витрина, Селфи, Профиль, Друзья, Премиум — всё в один тап, без команд.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
           }
         ]
       },
@@ -430,9 +438,17 @@
         "label": "📸 Фото",
         "features": [
           {
-            "name": "Фото персонажа",
+            "name": "Фото Lumi — сразу и бесплатно",
+            "trigger": "/selfie, покупка в /shop",
+            "desc": "Реальная генерация фото прямо в боте через бесплатный Pollinations.ai (без ключа и оплаты) — приходит за ~минуту. Первое селфи бесплатно, дальше фото-пакет за искры.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          },
+          {
+            "name": "Фото персонажа (GPU)",
             "trigger": "после /setup и в /shop",
-            "desc": "По описанию внешности рисует фото Lumi (Stable Diffusion + InstantID) на бесплатном GPU.",
+            "desc": "По описанию внешности рисует фото Lumi (Stable Diffusion + InstantID) на бесплатном GPU — качество выше, подхватит ту же очередь, когда воркер онлайн.",
             "status": "external",
             "owner": "Дима",
             "color": "#a855f7"
