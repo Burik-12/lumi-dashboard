@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 17:12 UTC",
-  "total_commits": 35,
-  "total_lines": 5154,
-  "total_deleted": 565,
+  "generated_at": "2026-06-29 17:15 UTC",
+  "total_commits": 36,
+  "total_lines": 5292,
+  "total_deleted": 571,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 26,
-      "lines": 3767,
-      "deleted": 286,
+      "commits": 27,
+      "lines": 3905,
+      "deleted": 292,
       "units": 2.27,
       "last_active": "2026-06-29",
-      "share_pct": 66.9,
+      "share_pct": 67.3,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.84,
       "last_active": "2026-06-29",
-      "share_pct": 17.7,
+      "share_pct": 17.4,
       "color": "#a855f7",
       "pending": false
     },
@@ -44,7 +44,7 @@
       "deleted": 42,
       "units": 0.38,
       "last_active": "2026-06-29",
-      "share_pct": 8.6,
+      "share_pct": 8.5,
       "color": "#10b981",
       "pending": false
     },
@@ -161,6 +161,15 @@
       "color": "#2563eb",
       "area": "bot",
       "area_label": "🤖 бот",
+      "added": 138,
+      "deleted": 6
+    },
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
       "added": 206,
       "deleted": 6
     },
@@ -271,15 +280,6 @@
       "area_label": "⭐ биллинг",
       "added": 220,
       "deleted": 0
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "voice",
-      "area_label": "🔊 голос",
-      "added": 15,
-      "deleted": 1
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          24
+          25
         ]
       },
       {
@@ -501,6 +501,28 @@
             "name": "Личный профиль",
             "trigger": "/me",
             "desc": "Показывает уровень близости с полоской прогресса, стрик дней, баланс искр/энергии и что Lumi о тебе запомнила — виден рост отношений.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          }
+        ]
+      },
+      {
+        "key": "growth",
+        "label": "🎁 Рост и друзья",
+        "features": [
+          {
+            "name": "Реферальная ссылка",
+            "trigger": "/invite",
+            "desc": "Личная ссылка «приведи друга»: каждый пришедший по ней даёт 50 ✨ и тебе, и ему. Виден счётчик приглашённых.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          },
+          {
+            "name": "Награда за друга",
+            "trigger": "переход по ссылке",
+            "desc": "Новичок по реферальной ссылке сразу получает приветственные искры, а пригласившему капает бонус и +близость. Награда — раз за человека.",
             "status": "live",
             "owner": "Вова",
             "color": "#2563eb"
