@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 18:58 UTC",
-  "total_commits": 55,
-  "total_lines": 6829,
-  "total_deleted": 646,
+  "generated_at": "2026-06-29 19:01 UTC",
+  "total_commits": 56,
+  "total_lines": 6880,
+  "total_deleted": 647,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 45,
-      "lines": 5280,
-      "deleted": 355,
+      "commits": 46,
+      "lines": 5331,
+      "deleted": 356,
       "units": 2.34,
       "last_active": "2026-06-29",
-      "share_pct": 71.1,
+      "share_pct": 71.2,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 13.2,
+      "share_pct": 13.1,
       "color": "#a855f7",
       "pending": false
     },
@@ -161,6 +161,15 @@
       "color": "#2563eb",
       "area": "bot",
       "area_label": "🤖 бот",
+      "added": 51,
+      "deleted": 1
+    },
+    {
+      "date": "2026-06-29",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
       "added": 137,
       "deleted": 1
     },
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 104,
       "deleted": 0
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "media",
-      "area_label": "🖼 медиа",
-      "added": 7,
-      "deleted": 7
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          43
+          44
         ]
       },
       {
@@ -427,6 +427,14 @@
             "name": "Голосовой режим",
             "trigger": "/voice",
             "desc": "Включает ответы голосовыми сообщениями. Синтез через Edge-TTS — бесплатно, живой женский голос.",
+            "status": "live",
+            "owner": "Вова",
+            "color": "#2563eb"
+          },
+          {
+            "name": "Голосовое признание 🗣",
+            "trigger": "/confession",
+            "desc": "Lumi голосом говорит личное тёплое признание с учётом памяти, характера и близости. Премиум за искры, со скидкой по уровню близости.",
             "status": "live",
             "owner": "Вова",
             "color": "#2563eb"
