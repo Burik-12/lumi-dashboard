@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-29 20:20 UTC",
-  "total_commits": 61,
-  "total_lines": 7623,
-  "total_deleted": 675,
+  "generated_at": "2026-06-30 01:13 UTC",
+  "total_commits": 62,
+  "total_lines": 7735,
+  "total_deleted": 676,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 51,
-      "lines": 6074,
-      "deleted": 384,
+      "commits": 52,
+      "lines": 6186,
+      "deleted": 385,
       "units": 2.43,
       "last_active": "2026-06-30",
-      "share_pct": 73.3,
+      "share_pct": 73.4,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.68,
       "last_active": "2026-06-29",
-      "share_pct": 12.5,
+      "share_pct": 12.4,
       "color": "#a855f7",
       "pending": false
     },
@@ -161,6 +161,15 @@
       "color": "#2563eb",
       "area": "bot",
       "area_label": "🤖 бот",
+      "added": 112,
+      "deleted": 1
+    },
+    {
+      "date": "2026-06-30",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "bot",
+      "area_label": "🤖 бот",
       "added": 128,
       "deleted": 3
     },
@@ -271,15 +280,6 @@
       "area_label": "🤖 бот",
       "added": 69,
       "deleted": 1
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 30,
-      "deleted": 4
     }
   ],
   "activity": {
@@ -305,7 +305,7 @@
           0,
           0,
           2,
-          49
+          50
         ]
       },
       {
@@ -353,6 +353,13 @@
     ]
   },
   "open_prs": [
+    {
+      "number": 53,
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "feat",
+      "area_label": "feat"
+    },
     {
       "number": 52,
       "author": "Вова",
