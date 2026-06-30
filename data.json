@@ -8,10 +8,10 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-30 14:48 UTC",
-  "total_commits": 68,
-  "total_lines": 8355,
-  "total_deleted": 726,
+  "generated_at": "2026-06-30 18:41 UTC",
+  "total_commits": 69,
+  "total_lines": 8415,
+  "total_deleted": 727,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
@@ -22,7 +22,7 @@
       "deleted": 400,
       "units": 2.36,
       "last_active": "2026-06-30",
-      "share_pct": 71.4,
+      "share_pct": 70.8,
       "color": "#2563eb",
       "pending": false
     },
@@ -39,12 +39,12 @@
     },
     {
       "author": "Виталик",
-      "commits": 5,
-      "lines": 821,
-      "deleted": 74,
+      "commits": 6,
+      "lines": 881,
+      "deleted": 75,
       "units": 0.47,
-      "last_active": "2026-06-30",
-      "share_pct": 9.8,
+      "last_active": "2026-07-01",
+      "share_pct": 10.4,
       "color": "#10b981",
       "pending": false
     },
@@ -55,7 +55,7 @@
       "deleted": 38,
       "units": 0.51,
       "last_active": "2026-06-30",
-      "share_pct": 7.0,
+      "share_pct": 6.9,
       "color": "#f59e0b",
       "pending": false
     }
@@ -161,6 +161,15 @@
     }
   ],
   "recent": [
+    {
+      "date": "2026-07-01",
+      "author": "Виталик",
+      "color": "#10b981",
+      "area": "bot",
+      "area_label": "🤖 бот",
+      "added": 60,
+      "deleted": 1
+    },
     {
       "date": "2026-06-30",
       "author": "Алексей",
@@ -277,15 +286,6 @@
       "area_label": "🤖 бот",
       "added": 51,
       "deleted": 1
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 137,
-      "deleted": 1
     }
   ],
   "activity": {
@@ -339,7 +339,7 @@
           0,
           0,
           0,
-          5
+          6
         ]
       },
       {
