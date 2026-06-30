@@ -8,10 +8,10 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-30 01:19 UTC",
-  "total_commits": 65,
-  "total_lines": 8100,
-  "total_deleted": 691,
+  "generated_at": "2026-06-30 04:24 UTC",
+  "total_commits": 66,
+  "total_lines": 8115,
+  "total_deleted": 708,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
@@ -20,9 +20,9 @@
       "commits": 55,
       "lines": 6551,
       "deleted": 400,
-      "units": 2.43,
+      "units": 2.42,
       "last_active": "2026-06-30",
-      "share_pct": 73.9,
+      "share_pct": 73.4,
       "color": "#2563eb",
       "pending": false
     },
@@ -31,20 +31,20 @@
       "commits": 6,
       "lines": 706,
       "deleted": 214,
-      "units": 0.68,
+      "units": 0.67,
       "last_active": "2026-06-29",
-      "share_pct": 12.2,
+      "share_pct": 12.0,
       "color": "#a855f7",
       "pending": false
     },
     {
       "author": "Виталик",
-      "commits": 3,
-      "lines": 690,
-      "deleted": 54,
-      "units": 0.38,
+      "commits": 4,
+      "lines": 705,
+      "deleted": 71,
+      "units": 0.4,
       "last_active": "2026-06-30",
-      "share_pct": 7.8,
+      "share_pct": 8.5,
       "color": "#10b981",
       "pending": false
     },
@@ -136,25 +136,40 @@
       "desc": "фото-генерация",
       "owner": "Дима",
       "owner_color": "#a855f7",
-      "lines": 538,
+      "lines": 550,
       "contributors": [
         {
           "author": "Дима",
           "lines": 362,
-          "pct": 67,
+          "pct": 66,
           "color": "#a855f7"
         },
         {
           "author": "Вова",
           "lines": 176,
-          "pct": 33,
+          "pct": 32,
           "color": "#2563eb"
+        },
+        {
+          "author": "Виталик",
+          "lines": 12,
+          "pct": 2,
+          "color": "#10b981"
         }
       ],
       "started": true
     }
   ],
   "recent": [
+    {
+      "date": "2026-06-30",
+      "author": "Виталик",
+      "color": "#10b981",
+      "area": "media",
+      "area_label": "🖼 медиа",
+      "added": 15,
+      "deleted": 17
+    },
     {
       "date": "2026-06-30",
       "author": "Вова",
@@ -271,15 +286,6 @@
       "area_label": "🤖 бот",
       "added": 103,
       "deleted": 3
-    },
-    {
-      "date": "2026-06-30",
-      "author": "Виталик",
-      "color": "#10b981",
-      "area": "billing",
-      "area_label": "⭐ биллинг",
-      "added": 162,
-      "deleted": 12
     }
   ],
   "activity": {
@@ -333,7 +339,7 @@
           0,
           0,
           0,
-          3
+          4
         ]
       },
       {
