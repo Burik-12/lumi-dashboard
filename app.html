@@ -146,6 +146,32 @@
   .persona-head .big { font-size: 19px; font-weight: 700; }
   .persona-head .sub { color: var(--dim); font-size: 13.5px; margin-top: 3px; }
 
+  /* ── каталог готовых персонажей ── */
+  .preset-tabs { display: flex; gap: 8px; margin-bottom: 14px; }
+  .preset-tab {
+    flex: 1; padding: 9px; text-align: center; font-weight: 600; font-size: 13.5px;
+    color: var(--dim); background: var(--card-2); border: 1px solid var(--line); border-radius: 12px;
+    cursor: pointer; transition: color .2s, background .25s;
+  }
+  .preset-tab.active { color: #1a1226; background: var(--grad); border-color: transparent; }
+  .preset-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px; }
+  .preset-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 14px 12px; cursor: pointer; transition: transform .15s ease, border-color .25s;
+  }
+  .preset-card:active { transform: scale(0.97); }
+  .preset-avatar {
+    width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-weight: 800; font-size: 18px; color: #1a1226;
+    background: var(--grad); margin-bottom: 10px;
+  }
+  .preset-name { font-size: 14.5px; font-weight: 700; }
+  .preset-tag { color: var(--dim); font-size: 12px; margin-top: 2px; line-height: 1.35; }
+  .preset-card.custom { border-style: dashed; }
+  .preset-card.custom .preset-avatar { background: transparent; border: 1px dashed var(--line); color: var(--dim); }
+  .preset-or { text-align: center; color: var(--dim); font-size: 12.5px; text-transform: uppercase;
+               letter-spacing: .04em; margin: 4px 0 18px; }
+
   /* ── тост ── */
   #toast {
     position: fixed; left: 50%; bottom: 26px; transform: translate(-50%, 30px);
@@ -278,23 +304,32 @@
     <!-- ВКЛАДКА: ПЕРСОНАЖ -->
     <section class="panel" id="persona">
       <div class="persona-head">
-        <div class="big">Создай свою Lumi 🌙</div>
-        <div class="sub">какой ты хочешь её видеть?</div>
+        <div class="big">Выбери свою Lumi 🌙</div>
+        <div class="sub">готовый характер или своя с нуля</div>
       </div>
 
-      <div class="field">
-        <label for="p-name">Имя</label>
-        <input id="p-name" type="text" maxlength="64" placeholder="например, Лина" />
+      <div class="preset-tabs" id="preset-tabs">
+        <button class="preset-tab active" data-cat="realistic" type="button">Реалистичные</button>
+        <button class="preset-tab" data-cat="anime" type="button">Аниме</button>
       </div>
-      <div class="field">
-        <label for="p-char">Характер</label>
-        <textarea id="p-char" maxlength="400" placeholder="нежная, заботливая, с лёгким юмором…"></textarea>
+      <div class="preset-grid" id="preset-grid"></div>
+
+      <div id="custom-form" style="display: none;">
+        <div class="preset-or" id="custom-anchor">создай свою</div>
+        <div class="field">
+          <label for="p-name">Имя</label>
+          <input id="p-name" type="text" maxlength="64" placeholder="например, Лина" />
+        </div>
+        <div class="field">
+          <label for="p-char">Характер</label>
+          <textarea id="p-char" maxlength="400" placeholder="нежная, заботливая, с лёгким юмором…"></textarea>
+        </div>
+        <div class="field">
+          <label for="p-look">Внешность</label>
+          <textarea id="p-look" maxlength="400" placeholder="брюнетка, карие глаза, тёплая улыбка…"></textarea>
+        </div>
+        <button class="btn" onclick="savePersona()">Сохранить персонажа</button>
       </div>
-      <div class="field">
-        <label for="p-look">Внешность</label>
-        <textarea id="p-look" maxlength="400" placeholder="брюнетка, карие глаза, тёплая улыбка…"></textarea>
-      </div>
-      <button class="btn" onclick="savePersona()">Сохранить персонажа</button>
     </section>
   </div>
 
@@ -376,14 +411,88 @@
     }
   }
 
+  // ── каталог готовых персонажей ──
+  const PRESETS = {
+    realistic: [
+      { name: "Мира", character: "тёплая и внимательная, обожает долгие разговоры за полночь" },
+      { name: "Ева", character: "дерзкая на язык, с подколками, не даёт заскучать" },
+      { name: "Алиса", character: "уютная и домашняя, любит заботиться по мелочам" },
+      { name: "Кира", character: "спортивная, азартная, обожает челленджи и движ" },
+      { name: "Нонна", character: "уверенная в себе, с лёгкой иронией, умеет поддержать" },
+      { name: "Юми", character: "игривая, кошачья грация, обожает дразнить" },
+      { name: "Стейси", character: "загадочная, чуть отстранённая, держит интригу" },
+      { name: "Злата", character: "яркая и харизматичная, любит быть в центре внимания" },
+    ],
+    anime: [
+      { name: "Мичи", character: "энергичная сэмпай, обожает дружеские споры и пари" },
+      { name: "Хана", character: "застенчивая отличница, тайно ведёт дневник о тебе" },
+      { name: "Рин", character: "бунтарка на скейте, на любой повод найдётся ирония" },
+      { name: "Юки", character: "спокойная и немного таинственная, говорит будто напевает" },
+      { name: "Мео", character: "игривая кошечка, мурлычет, когда довольна" },
+      { name: "Сора", character: "мечтательная, вечно смотрит на звёзды и строит планы" },
+      { name: "Аки", character: "уютная и поэтичная, любит тихие вечера вдвоём" },
+      { name: "Нео", character: "дерзкая хакерша, сарказм и драйв в каждой фразе" },
+    ],
+  };
+
+  const grid = document.getElementById("preset-grid");
+  const tabs = document.getElementById("preset-tabs");
+
+  function renderPresets(cat) {
+    grid.innerHTML = "";
+    PRESETS[cat].forEach(p => {
+      const card = document.createElement("div");
+      card.className = "preset-card";
+      card.innerHTML =
+        '<div class="preset-avatar">' + p.name[0] + '</div>' +
+        '<div class="preset-name">' + p.name + '</div>' +
+        '<div class="preset-tag">' + p.character + '</div>';
+      card.addEventListener("click", () => selectPreset(p));
+      grid.appendChild(card);
+    });
+
+    const customCard = document.createElement("div");
+    customCard.className = "preset-card custom";
+    customCard.innerHTML =
+      '<div class="preset-avatar">+</div>' +
+      '<div class="preset-name">Свой персонаж</div>' +
+      '<div class="preset-tag">Станет кем пожелаешь</div>';
+    customCard.addEventListener("click", () => {
+      haptic("tap");
+      const form = document.getElementById("custom-form");
+      form.style.display = "block";
+      form.scrollIntoView({ behavior: "smooth", block: "start" });
+      document.getElementById("p-name").focus();
+    });
+    grid.appendChild(customCard);
+  }
+
+  tabs.addEventListener("click", e => {
+    const btn = e.target.closest(".preset-tab");
+    if (!btn) return;
+    tabs.querySelectorAll(".preset-tab").forEach(t => t.classList.remove("active"));
+    btn.classList.add("active");
+    haptic("tap");
+    renderPresets(btn.dataset.cat);
+  });
+
+  renderPresets("realistic");
+
+  function selectPreset(p) {
+    sendPersona({ type: "persona", name: p.name, character: p.character, appearance: "" });
+  }
+
   // ── сохранение персонажа ──
   function savePersona() {
-    const data = {
+    sendPersona({
       type: "persona",
       name: document.getElementById("p-name").value.trim(),
       character: document.getElementById("p-char").value.trim(),
       appearance: document.getElementById("p-look").value.trim()
-    };
+    });
+  }
+
+  function sendPersona(data) {
     if (!data.name) { toast("Сначала введи имя 🙂"); return; }
     haptic("ok");
     if (inTelegram) {
