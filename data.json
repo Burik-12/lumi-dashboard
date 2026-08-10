@@ -8,21 +8,21 @@
   },
   "recent_mode": "area",
   "idle_after_days": 7,
-  "generated_at": "2026-06-30 18:41 UTC",
-  "total_commits": 69,
-  "total_lines": 8415,
+  "generated_at": "2026-08-10 10:10 UTC",
+  "total_commits": 70,
+  "total_lines": 8471,
   "total_deleted": 727,
   "modules_active": 4,
   "modules_total": 4,
   "rows": [
     {
       "author": "Вова",
-      "commits": 55,
-      "lines": 6551,
+      "commits": 56,
+      "lines": 6607,
       "deleted": 400,
       "units": 2.36,
-      "last_active": "2026-06-30",
-      "share_pct": 70.8,
+      "last_active": "2026-08-10",
+      "share_pct": 71.0,
       "color": "#2563eb",
       "pending": false
     },
@@ -33,7 +33,7 @@
       "deleted": 214,
       "units": 0.66,
       "last_active": "2026-06-29",
-      "share_pct": 11.8,
+      "share_pct": 11.7,
       "color": "#a855f7",
       "pending": false
     },
@@ -162,6 +162,15 @@
   ],
   "recent": [
     {
+      "date": "2026-08-10",
+      "author": "Вова",
+      "color": "#2563eb",
+      "area": "ARCHIVE.md",
+      "area_label": "ARCHIVE.md",
+      "added": 56,
+      "deleted": 0
+    },
+    {
       "date": "2026-07-01",
       "author": "Виталик",
       "color": "#10b981",
@@ -277,41 +286,32 @@
       "area_label": ".github",
       "added": 92,
       "deleted": 16
-    },
-    {
-      "date": "2026-06-29",
-      "author": "Вова",
-      "color": "#2563eb",
-      "area": "bot",
-      "area_label": "🤖 бот",
-      "added": 51,
-      "deleted": 1
     }
   ],
   "activity": {
     "labels": [
-      "11.05",
-      "18.05",
-      "25.05",
-      "01.06",
-      "08.06",
-      "15.06",
       "22.06",
-      "29.06"
+      "29.06",
+      "06.07",
+      "13.07",
+      "20.07",
+      "27.07",
+      "03.08",
+      "10.08"
     ],
     "datasets": [
       {
         "author": "Вова",
         "color": "#2563eb",
         "data": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           2,
-          53
+          53,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
         ]
       },
       {
@@ -319,13 +319,13 @@
         "color": "#a855f7",
         "data": [
           0,
+          6,
           0,
           0,
           0,
           0,
           0,
-          0,
-          6
+          0
         ]
       },
       {
@@ -333,13 +333,13 @@
         "color": "#10b981",
         "data": [
           0,
+          6,
           0,
           0,
           0,
           0,
           0,
-          0,
-          6
+          0
         ]
       },
       {
@@ -347,13 +347,13 @@
         "color": "#f59e0b",
         "data": [
           0,
+          2,
           0,
           0,
           0,
           0,
           0,
-          0,
-          2
+          0
         ]
       }
     ]
